@@ -9,7 +9,7 @@ This required a complete rewrite of the anti garbling system in WCE from scratch
 
 ## Comparison between the Anti Garble system in FBC and WCE
 
-|                                      | FBC \<=5.9 with BC \<=r102 | WCE >=6.2 with BC >=r104 |
+|                                      | FBC ≤5.9 with BC ≤r102 | WCE ≥6.2 with BC ≥r104 |
 | :---                                 |           :---:          |           :---:          | 
 | `Where does BC's garbling happen?`   | on the recipient (BC sends every message as ungarbled cleartext and recipient garbles message based on the senders gag level and their deafen level | on the sender (BC garbles messages on the sender side and only sends garbled message by default to all recipients, who add deafen garble if needed) |
 | `Who needs an addon for it to work?` | recipient must have FBC to see ungarbled messages | sender must have WCE, recipient don't require any addons to see ungarbled messages send by WCE users |
