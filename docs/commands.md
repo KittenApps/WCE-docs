@@ -71,6 +71,20 @@ sidebar_position: 4
 * set your characters pose to the specified pose or space seperated list of poses
 * pass `list` as an argument to see a list of all available poses
 
+## Uwall / Ulist commands
+
+### `/ulistadd [member number]`
+
+* adds the player with the specified member number to the list allowing to bypass Uwall
+
+### `/ulistremove [member number]`
+
+* removes the player with the specified member number from the list allowing to bypass Uwall
+
+### `/ulistshow`
+
+* displays the list of players allowed to bypass Uwall
+
 ## Toy Sync commands
 
 :::info
