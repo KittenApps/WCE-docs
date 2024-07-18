@@ -1,0 +1,56 @@
+---
+sidebar_position: 2
+---
+
+import Link from '@docusaurus/Link';
+
+# Installation
+
+### Install a user script manager (prerequisite)
+
+* install [Violentmonkey](https://violentmonkey.github.io/#installation) (recommended, open source) for your browser following the linked instructions 
+* or [Tampermonkey](https://www.tampermonkey.net/) (closed source, includes questionable tracking)
+* for (mobile) Safari you could use [Userscripts](https://apps.apple.com/de/app/userscripts/id1463298887)
+
+### Load via FUSAM (easiest)
+
+* follow [FUSAM's installation instructions](https://sidiousious.gitlab.io/bc-addon-loader/) to install FUSAM or simply click this button:
+<Link className="button button--primary button--md" to="https://sidiousious.gitlab.io/bc-addon-loader/loader.user.js">Install FUSAM loader</Link> 
+* then load `WCE` through FUSAM's addon settings
+
+
+:::warning
+Make sure that the old FBC version isn't loaded through FUSAM anymore
+:::
+
+### Install optimized WCE loader (fastest)
+
+* for faster WCE loading times you can alternatively use WCE's optimized loaders, which use `modulepreload` techniques to significantly speed up the loading time for your saved WCE logins
+* just install the `WCE with FUSAM loader` by clicking this button
+<Link className="button button--primary button--md" to="https://wce.netlify.app/wce-fusam-loader.user.js">Install FUSAM loader</Link>
+
+:::warning
+This will also load FUSAM for you. You can remove the superfluous FUSAM loader from your user script manager.
+:::
+
+### Bookmarklet
+
+:::info
+It is highly recommended to use the automatic user script loader method over using a bookmarklet
+:::
+
+* install the FUSAM bookmarklet by dragging this button to your bookmark bar
+<a class="button button--primary button--md" href="javascript:(() => {if(!window.FUSAM){let s = document.body.appendChild(document.createElement('script')); s.type= 'module'; s.src='https://sidiousious.gitlab.io/bc-addon-loader/fusam.js?_='+Date.now();}})();">FUSAM loader</a>
+* (for mobile users) or create new Bookmark and add the following code as the URL of the new bookmark:
+```js
+javascript:(() => {if(!window.FUSAM){let s = document.body.appendChild(document.createElement('script')); s.type= 'module'; s.src='https://sidiousious.gitlab.io/bc-addon-loader/fusam.js?_='+Date.now();}})();
+```
+* then load WCE through the FUSAM's addon list (and make sure to not load FBC)
+
+## Beta releases
+
+:::info
+Using WCE's beta releases is highly recommended for compatibility reasons, when trying out new BC beta version
+:::
+
+* to use WCE's beta releases go to FUSAM's addon settings and switch WCE to the dev channel
