@@ -40,6 +40,10 @@ const config = {
           blogSidebarCount: 'ALL',
           showLastUpdateTime: true,
           editUrl: 'https://github.com/KittenApps/wce-docs/tree/main/',
+          feedOptions: {
+            type: 'all',
+            xslt: true,
+          }
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -136,7 +140,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} WCE. Built with <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">Docusaurus</a>. Icons by <a href="https://icons8.com/" target="_blank" rel="noopener noreferrer">Icons8</a>.`,
+        copyright: `Copyright © ${new Date().getFullYear()} WCE. Built with <a href="https://docusaurus.io/" target="_blank" rel="noopener norenpm startrrer">Docusaurus</a>. Icons by <a href="https://icons8.com/" target="_blank" rel="noopener noreferrer">Icons8</a>.`,
       },
       prism: {
         theme: prismThemes.github,
